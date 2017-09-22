@@ -1,1 +1,8 @@
-__pycache__/
+*
+!*.py
+!*.cpp
+!*.c
+!*.java
+!.gitignore
+!README
+!*/

@@ -35,7 +35,7 @@ def CountingSort(array, key=lambda x: x):
         counts[k] += 1       # the place to put, next same element should put in next place
     return result
 
-def CountingSort(array, key=lambda x: x):
+def CountingSortUnstable(array, key=lambda x: x):
     '''
     unstable but more clear, according to <<introduction to algorithms>>
     '''
