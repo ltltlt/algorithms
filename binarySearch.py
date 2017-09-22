@@ -9,13 +9,16 @@
 def binarySearch(k, array):
     l, u = 0, len(array)-1
     while l<=u:
+        # invariant: if k in array, then k in [l, u]
         m = (l+u)//2
         if array[m] > k:
             u = m-1
         elif array[m] < k:
             l = m+1
         else: return m
-    return -l
+    # assert l==u+1
+    return -l       # if not found, l is the index to insert k in array to keep array in sort
+                    # at last, l must be the first element in array which is larger than k
 def binarySearchRecursive(k, array):
     def recursive(k, array, l, u):
         if l>u: return -l
