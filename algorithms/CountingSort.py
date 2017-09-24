@@ -6,7 +6,7 @@
   > Created Time:	2017-09-22 Fri 13:07
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
-" used when element in array in small range "
+" used when element in small range "
 " time complexity O(n), stable"
 def check(keys, low_bound, up_bound):
     class CheckError(Exception): pass
