@@ -2,21 +2,21 @@
   > System:		Ubuntu
   > Author:		ty-l8
   > Mail:		liuty196888@gmail.com
-  > File Name:		selectsort.py
+  > File Name:		insertsort.py
   > Created Time:	2017-09-22 Fri 10:58
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
-# select sort using binarySearch written by lty, which time complexity is O(nlogn)
+# insert sort using binarySearch written by lty, which time complexity is O(nlogn)
 
 from binarySearch import binarySearch
 
-def selectSort(array):
+def insertSort(array):
     result = []
     for elem in array:
         result.insert(abs(binarySearch(elem, result)), elem)
     return result
 
-def normalSelectSort(array):
+def normalInsertSort(array):
     length = len(array)
     if length<=1: return array
     for i in range(1, length):
@@ -26,7 +26,7 @@ def normalSelectSort(array):
         array[i], array[j] = array[j], array[i]
     return array
 
-def recursiveSelectSort(array, result):
+def recursiveInsertSort(array, result):
     if len(result) >= len(array):
         return result
     elem = array[len(result)]
