@@ -1,1 +1,2 @@
 This directory contains algorithms about search substring from a string.
+Now we have (robin carp), a algorithm using rolling hash to generate fingerprint.
