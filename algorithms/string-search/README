@@ -1,2 +1,5 @@
 This directory contains algorithms about search substring from a string.
-Now we have (robin carp), a algorithm using rolling hash to generate fingerprint.
+Now we have:
+		robin carp, an algorithm using rolling hash to generate fingerprint.
+		KMP, an algorithm which make no need text to go back.
+		Boyer-Moore, an algorithm which is quite fast by making i grows fast.

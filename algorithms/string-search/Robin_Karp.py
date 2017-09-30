@@ -6,6 +6,8 @@
   > Created Time:	2017-09-28 Thu 17:29
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
+from basic import BasicSubStringSearch
+
 ' Use rolling hash, quite easy to understand(especially compares to KMP) '
 
 def mod(a, b):
@@ -17,9 +19,9 @@ def LasVegas(str1, str2):
 def MonteCarlo(str1, str2):
     " ensure the time complexity is O(m+n) "
     return True
-class Robin_Karp:
+class Robin_Karp(BasicSubStringSearch):
     def __init__(self, pattern):
-        self.pattern = pattern
+        super().__init__(pattern)
     def process(self, string, check=MonteCarlo, hash_num=1):    # find first occurance of pattern in string
         " find all pattern from string, string and pattern should be sequence of ascii "
         " you can surely change base to make it fit unicode "
@@ -46,10 +48,4 @@ class Robin_Karp:
                 hashs[j] = mod(mod(hashs[j], Ms[j])*bases[j] + ord(string[i+m-1]), Ms[j])
             if hashs == pat_hashs and check(pattern, string[i:i+m]):
                 return i
-    def pretify(self, *args, **kwargs):
-        index = self.process(*args, **kwargs)
-        if index is None:
-            print('Not found!')
-        else:
-            print(*args)
-            print(' '*index+self.pattern)
+        return n
