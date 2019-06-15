@@ -5,5 +5,5 @@
 !*.java
 !*.go
 !.gitignore
-!README
+!README*
 !*/
