@@ -3,6 +3,7 @@
 !*.cpp
 !*.c
 !*.java
+!*.go
 !.gitignore
 !README
 !*/
